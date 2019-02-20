@@ -1,0 +1,16 @@
+<h1>Comments</h1>
+
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th>Write a Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><textarea class="form-control" name="Content" [(ngModel)]='Content'></textarea></td>
+    </tr>
+  </tbody>
+</table>
+<td><button style="margin:10px;" class="btn btn-success" (click)="AddComment()">Save</button></td>
+<td><a class="btn btn-info" [routerLink]="['/message-board-data']">Back</a></td>

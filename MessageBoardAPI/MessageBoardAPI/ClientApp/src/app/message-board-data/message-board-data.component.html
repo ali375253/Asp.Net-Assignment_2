@@ -1,0 +1,22 @@
+<h1>Message Board</h1>
+
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Likes</th>
+      <th>Comments</th>
+      <th>Add Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let message of messages">
+      <!--<td>{{ message.messageId }}</td>-->
+      <td>{{ message.messageContent }}</td>
+      <td><button class="btn btn-primary" (click)="AddLike(message.messageId)">Likes {{ message.likes }}</button></td>
+      <td><button class="btn btn-warning" (click)="GetComment(message.messageId)">Comments {{ message.comments}}</button></td>
+      <td><button class="btn btn-success" (click)="AddComment(message.messageId)">Add Comment</button></td>
+    </tr>
+  </tbody>
+</table>
+<button colspan="2" class="btn btn-danger" (click)="AddMessage()">Add Message</button>

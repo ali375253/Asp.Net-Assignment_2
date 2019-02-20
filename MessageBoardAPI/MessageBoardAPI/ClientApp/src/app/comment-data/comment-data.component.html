@@ -1,0 +1,10 @@
+<h1>Comments</h1>
+
+<table class='table table-striped'>
+  <tbody>
+    <tr *ngFor="let comment of comments">
+      <td>{{ comment.content }}</td>
+    </tr>
+  </tbody>
+</table>
+<a class="btn btn-info" [routerLink]="['/message-board-data']">Back</a>
